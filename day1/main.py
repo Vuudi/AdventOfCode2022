@@ -14,6 +14,7 @@ if __name__ == '__main__':
 
             currentSum += int(line)
 
+    elves.append(currentSum)
     elves.sort()
 
     # part 1
