@@ -1,24 +1,21 @@
 if __name__ == '__main__':
-    elfCount = 1
-    maxElf = 0
-    maxCalorieSum = -1
-    currentCalorieSum = 0
-
+    elves = []
+    i = 0
+    currentSum = 0
     with open('input.txt', 'r') as calorieList:
         for line in calorieList:
             line = line.strip()
 
             if line == '':
-                if maxElf == 0 or currentCalorieSum > maxCalorieSum:
-                    maxElf = elfCount
-                    maxCalorieSum = currentCalorieSum
-                elfCount += 1
-                currentCalorieSum = 0
+                elves.append(currentSum)
+                i += 1
+                currentSum = 0
                 continue
 
-            currentCalorieSum += int(line)
+            currentSum += int(line)
 
-    if maxElf == 0 or currentCalorieSum > maxCalorieSum:
-        maxElf = elfCount
+    elves.sort()
 
-    print(maxCalorieSum)
+    # part 1
+    # print(sum(elves[-1:]))
+    print(sum(elves[-3:]))
