@@ -13,7 +13,7 @@ if __name__ == '__main__':
                     maxElf = elfCount
                     maxCalorieSum = currentCalorieSum
                 elfCount += 1
-                currentElfSum = 0
+                currentCalorieSum = 0
                 continue
 
             currentCalorieSum += int(line)
