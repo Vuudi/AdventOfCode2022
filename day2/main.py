@@ -20,11 +20,11 @@ if __name__ == '__main__':
             outcome = (ord(line[2]) - 88) * 3
 
             if outcome == 0:
-                you = opponent
+                you = (opponent + 1) % 3 + 1
             elif outcome == 3:
-                you = (opponent + 2) % 3
+                you = opponent
             else:
-                you = (opponent + 1) % 3
+                you = opponent % 3 + 1
 
             totalScore += you + outcome
 
